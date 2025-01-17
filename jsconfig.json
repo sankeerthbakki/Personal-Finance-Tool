@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "baseUrl": ".",
+    "allowJs": true,
+    "checkJs": true
+  },
+  "include": ["src/**/*.js", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["node_modules", "dist"]
+}
