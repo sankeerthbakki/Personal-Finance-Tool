@@ -1,20 +1,30 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+
+import Navbar from './components/Navbar.vue';
+import Sidebar from './components/Sidebar.vue';
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <HelloWorld msg="Under Development!" />
+  <div id="app" class="flex">
+    <Sidebar />
+    <div class="flex-1 ml-60">
+      <Navbar />
+      <main class="p-6 bg-gray-100 min-h-screen">
+        <router-view />
+      </main>
     </div>
-  </header>
-
-  <!-- <RouterView /> -->
+  </div>
 </template>
 
 <style scoped>
-header {
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+/* header {
   line-height: 1.5;
   max-height: 100vh;
 }
@@ -74,5 +84,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+} */
 </style>
