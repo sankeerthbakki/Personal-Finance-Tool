@@ -16,14 +16,19 @@
         <p class="text-2xl font-bold">${{ store.getNetSavings }}</p>
       </div>
     </div>
+    <PlaidLink />
   </div>
 </template>
 
 <script>
 import { useFinanceStore } from "../stores/financeStore";
+import PlaidLink from "../components/PlaidLink.vue";
 
 export default {
   name: "Dashboard",
+  components: {
+    PlaidLink,
+  },
   setup() {
     const store = useFinanceStore();
     store.calculateTotals(); // Compute totals on mount
